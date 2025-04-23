@@ -1,0 +1,82 @@
+Index.html
+
+<h1>Finding Smallest Word</h1>
+<input placeholder="Enter words or Phrases" type="text" name="" id="inp">
+
+<button onclick="print()">Check</button>
+<button onclick="window.location.reload()">Remove</button>
+
+<br>
+<br>
+
+
+<div id="para">
+
+</div>
+
+Style.CSS
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+    color: black;
+}
+
+#inp{
+    position: relative;
+    left:80px;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 5px;
+    color:  purple;
+}
+
+button{
+    position: relative;
+    left: 80px;
+    background-color: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+}
+
+#para{
+    text-align: center;
+    color: darkblue;
+}
+
+body{
+    background-color: darkseagreen;
+}
+
+input::placeholder{
+    color: brown;
+}
+
+App.JS
+
+function print(){
+
+var getInp =document.getElementById("inp")
+
+var getPara =document.getElementById("para")
+
+var convert= getInp.value.split(" ")
+  
+   smallestword= convert[0]
+  
+  for(var i=0;i<convert.length;i++){
+  
+    if(convert[i].length<smallestword.length){
+      smallestword=convert[i]
+    }
+  }
+  
+ getPara.innerHTML+=`<li>The smallest word is: ${smallestword}</li>`
+
+ getInp.value=""
+  
+}
