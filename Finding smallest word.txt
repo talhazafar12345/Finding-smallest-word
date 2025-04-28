@@ -1,5 +1,9 @@
 Index.html
 
+<div class="p1">
+
+
+
 <h1>Finding Smallest Word</h1>
 <input placeholder="Enter words or Phrases" type="text" name="" id="inp">
 
@@ -55,6 +59,15 @@ body{
 input::placeholder{
     color: brown;
 }
+
+
+
+.p1{
+  text-align: center;
+}
+
+
+
 
 App.JS
 
